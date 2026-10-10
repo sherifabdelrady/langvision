@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+[project]
+name = "langvision"
+version = "0.1.0"
+description = "LLaVA-1.6 visual question answering with LoRA fine-tuning and vLLM serving"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "Sherif Abd El-Rady", email = "sherifabdelrady@gmail.com" }]
+keywords = ["llava","vqa","multimodal","lora","vllm","llama","clip","pytorch"]
+dependencies = ["torch>=2.0","transformers>=4.37","pillow","numpy","peft","vllm","fastapi>=0.100","uvicorn[standard]"]
+[project.urls]
+Homepage = "https://sherifabdelrady.github.io/cv-portfolio/"
+Repository = "https://github.com/sherifabdelrady/langvision"
+[tool.ruff]
+line-length = 120

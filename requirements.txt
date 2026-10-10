@@ -1,0 +1,11 @@
+torch>=2.0
+torchvision>=0.15
+transformers>=4.37
+pillow
+numpy
+accelerate
+peft
+bitsandbytes
+vllm
+fastapi>=0.100
+uvicorn[standard]
