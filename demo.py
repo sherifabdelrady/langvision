@@ -1,5 +1,9 @@
+﻿# NOTE: This demo shows example outputs. Install vllm and download the model
+# to run live inference: python server.py --model llava-hf/llava-v1.6-mistral-7b-hf
+# GPU requirement: ~14GB VRAM (BF16) or ~8GB (4-bit quantisation)
+
 """
-LangVision Demo — Visual Question Answering with LLaVA-1.6.
+LangVision Demo â€” Visual Question Answering with LLaVA-1.6.
 Usage: python demo.py --image path/to/image.jpg --question "What is shown?"
 """
 import argparse
@@ -19,7 +23,7 @@ def run_demo(image_path: str, question: str):
     print()
     print("Pipeline:")
     print("  1. CLIP ViT-L/14 encodes image at 672x672 (dynamic tiling)")
-    print("     → 2880 visual tokens")
+    print("     â†’ 2880 visual tokens")
     print("  2. LLaMA-3-8B processes [visual_tokens + question_tokens]")
     print("  3. LoRA adapters (r=16) steer output to domain")
     print("  4. vLLM PagedAttention streams tokens")
